@@ -1,0 +1,2177 @@
+<!-- # Yadav Welfare Society - Responsive Single Page Website -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Yadav Welfare Society</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        overflow-x: hidden;
+        background: #f8fafc;
+      }
+
+      /* ================= NAVBAR ================= */
+
+      .navbar {
+        background: #0f172a;
+        padding: 15px 0;
+        transition: 0.4s;
+      }
+
+      .navbar-brand {
+        color: #fff !important;
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      .navbar-brand span {
+        color: #f59e0b;
+      }
+
+      .nav-link {
+        color: #fff !important;
+        margin-left: 15px;
+        font-weight: 500;
+        position: relative;
+        transition: 0.3s;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0%;
+        height: 2px;
+        background: #f59e0b;
+        transition: 0.4s;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .register-btn {
+        background: #f59e0b;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        transition: 0.3s;
+        font-weight: 600;
+      }
+
+      .register-btn:hover {
+        transform: translateY(-3px);
+        background: #ffb703;
+      }
+
+      .login-btn {
+        border: 2px solid #fff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 30px;
+        margin-left: 10px;
+        transition: 0.3s;
+        font-weight: 600;
+      }
+
+      .login-btn:hover {
+        background: #fff;
+        color: #0f172a;
+      }
+
+      /* ================= HERO SECTION ================= */
+
+      .hero-slider {
+        position: relative;
+      }
+
+      .hero-slide {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      /* ========================================================= SLIDE 1 ========================================================= */
+      .hero-slide-1 {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+          url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2070");
+        background-size: cover;
+        background-position: center;
+      } /* ========================================================= SLIDE 2 ========================================================= */
+      .hero-slide-2 {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+          url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070");
+        background-size: cover;
+        background-position: center;
+      } /* ========================================================= SLIDE 3 ========================================================= */
+      .hero-slide-3 {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+          url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071");
+        background-size: cover;
+        background-position: center;
+      } /* ========================================================= HERO CONTENT ========================================================= */
+      .hero-content {
+        max-width: 900px;
+        color: #fff;
+        z-index: 2;
+      }
+      .hero-content h1 {
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+      .hero-content h1 span {
+        color: #f59e0b;
+      }
+      .hero-content p {
+        font-size: 22px;
+        line-height: 2;
+        margin-bottom: 30px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ========================================================= BUTTONS ========================================================= */
+      .hero-btn {
+        margin-top: 20px;
+      }
+      .hero-btn a {
+        text-decoration: none;
+        padding: 15px 38px;
+        border-radius: 50px;
+        display: inline-block;
+        margin: 10px;
+        font-weight: 600;
+        transition: 0.4s;
+        font-size: 16px;
+      } /* ========================================================= PRIMARY BUTTON ========================================================= */
+      .btn1 {
+        background: #f59e0b;
+        color: #fff;
+        box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+      }
+      .btn1:hover {
+        background: #ffb703;
+        color: #fff;
+        transform: translateY(-5px);
+      } /* ========================================================= SECONDARY BUTTON ========================================================= */
+      .btn2 {
+        border: 2px solid #fff;
+        color: #fff;
+      }
+      .btn2:hover {
+        background: #fff;
+        color: #0f172a;
+        transform: translateY(-5px);
+      } /* ========================================================= INDICATORS ========================================================= */
+      .carousel-indicators {
+        margin-bottom: 40px;
+      }
+      .carousel-indicators button {
+        width: 14px !important;
+        height: 14px !important;
+        border-radius: 50%;
+        background-color: #f59e0b !important;
+      } /* ========================================================= REMOVE LEFT RIGHT SLIDE EFFECT ========================================================= */
+      .carousel-item {
+        transition: opacity 0.9s ease-in-out !important;
+        transform: none !important;
+      }
+      .carousel-item-next,
+      .carousel-item-prev,
+      .carousel-item.active {
+        transform: none !important;
+      }
+      .carousel-inner {
+        overflow: hidden;
+      } /* ========================================================= PURE FADE EFFECT ========================================================= */
+      .carousel-fade .carousel-item {
+        opacity: 0;
+      }
+      .carousel-fade .carousel-item.active {
+        opacity: 1;
+      } /* ========================================================= RESPONSIVE TABLET ========================================================= */
+      @media (max-width: 992px) {
+        .hero-content h1 {
+          font-size: 52px;
+        }
+        .hero-content p {
+          font-size: 18px;
+        }
+      }
+
+      /* ================= ABOUT ================= */
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-title h2 {
+        font-size: 42px;
+        font-weight: 700;
+        color: #0f172a;
+      }
+
+      .section-title p {
+        color: #666;
+      }
+
+      .section-about-title {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .section-about-title h2 {
+        font-size: 48px;
+        font-weight: 700;
+        color: #0f172a;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+      .section-about-title p {
+        color: #64748b;
+        font-size: 18px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+
+      .about-section {
+        padding: 100px 0;
+        background: #f8fafc;
+        overflow: hidden;
+      }
+
+      .about-tag {
+        background: #f59e0b;
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 50px;
+        display: inline-block;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+
+      /* ================= IMAGE SIDE ================= */
+      .about-image-wrapper {
+        position: relative;
+        height: 100%;
+        min-height: 650px;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      }
+      .about-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.6s;
+      }
+      .about-image-wrapper:hover img {
+        transform: scale(1.08);
+      }
+      .about-image-overlay {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        background: rgba(15, 23, 42, 0.9);
+        padding: 25px 35px;
+        border-radius: 20px;
+        color: #fff;
+        backdrop-filter: blur(10px);
+      }
+      .about-image-overlay h3 {
+        font-size: 40px;
+        font-weight: 700;
+        color: #f59e0b;
+        margin-bottom: 5px;
+      }
+      .about-image-overlay p {
+        margin: 0;
+        font-size: 16px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ================= CONTENT SIDE ================= */
+      .about-content-box {
+        background: #fff;
+        padding: 50px;
+        border-radius: 30px;
+        height: 100%;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .about-content-box h3 {
+        font-size: 34px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 25px;
+        line-height: 1.5;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+      .about-content-box p {
+        color: #475569;
+        line-height: 2;
+        margin-bottom: 22px;
+        font-size: 17px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ================= POINTS ================= */
+      .about-points {
+        margin-top: 20px;
+      }
+      .about-point {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+      }
+      .about-point i {
+        width: 40px;
+        height: 40px;
+        background: #f59e0b;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 14px;
+      }
+      .about-point span {
+        color: #0f172a;
+        font-size: 17px;
+        font-weight: 500;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ================= BUTTON ================= */
+      .about-btn {
+        margin-top: 35px;
+      }
+      .about-btn a {
+        display: inline-block;
+        background: #0f172a;
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 38px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: 0.4s;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+      .about-btn a:hover {
+        background: #f59e0b;
+        transform: translateY(-5px);
+      }
+      /* ================= COUNTER ================= */
+
+      .counter-section {
+        background: #0f172a;
+        color: #fff;
+        padding: 80px 0;
+      }
+
+      .counter-box {
+        text-align: center;
+        padding: 20px;
+      }
+
+      .counter-box h2 {
+        font-size: 50px;
+        color: #f59e0b;
+        font-weight: 700;
+      }
+
+      .counter-box p {
+        font-size: 20px;
+      }
+
+      /* ================= SERVICES ================= */
+
+      .services {
+        padding: 120px 0;
+        background: #f8fafc;
+        position: relative;
+        overflow: hidden;
+      } /* ========================================================= SECTION TITLE ========================================================= */
+      .section-service-title {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+      .section-service-title h2 {
+        font-size: 48px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 20px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+      .section-service-title p {
+        color: #64748b;
+        font-size: 18px;
+        line-height: 1.8;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ========================================================= SERVICE CARD ========================================================= */
+      .service-card {
+        background: #fff;
+        padding: 45px 35px;
+        border-radius: 28px;
+        text-align: center;
+        transition: 0.5s;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+      } /* ========================================================= HOVER EFFECT ========================================================= */
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(245, 158, 11, 0.1),
+          transparent
+        );
+        transition: 0.7s;
+      }
+      .service-card:hover::before {
+        left: 100%;
+      }
+      .service-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+      } /* ========================================================= ICON ========================================================= */
+      .service-icon {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 30px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #f59e0b, #ffb703);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 15px 30px rgba(245, 158, 11, 0.35);
+        transition: 0.5s;
+      }
+      .service-card:hover .service-icon {
+        transform: rotateY(180deg) scale(1.1);
+      }
+      .service-icon i {
+        font-size: 42px;
+        color: #fff;
+      } /* ========================================================= HEADING ========================================================= */
+      .service-card h4 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ========================================================= PARAGRAPH ========================================================= */
+      .service-card p {
+        color: #64748b;
+        line-height: 2;
+        font-size: 16px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+
+      /* ================= REGISTER ================= */
+
+      .register-section {
+        background: #eef2ff;
+        padding: 100px 0;
+      }
+
+      .form-box {
+        background: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .form-control {
+        height: 50px;
+        border-radius: 10px;
+      }
+
+      textarea.form-control {
+        height: 120px;
+      }
+
+      .submit-btn {
+        background: #0f172a;
+        color: #fff;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 30px;
+        transition: 0.3s;
+        font-weight: 600;
+      }
+
+      .submit-btn:hover {
+        background: #f59e0b;
+      }
+
+      /* ================= GALLERY ================= */
+
+      .gallery {
+        padding: 120px 0;
+        background: #ffffff;
+        overflow: hidden;
+      } /* ========================================================= SECTION TITLE ========================================================= */
+      .section-gallery-title {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+      .section-gallery-title h2 {
+        font-size: 48px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 20px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+      .section-gallery-title p {
+        color: #64748b;
+        font-size: 18px;
+        line-height: 1.8;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ========================================================= GALLERY CARD ========================================================= */
+      .gallery-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 25px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        transition: 0.5s;
+      } /* ========================================================= IMAGE SIZE SAME ========================================================= */
+      .gallery-card img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        transition: 0.6s;
+        display: block;
+      } /* ========================================================= HOVER EFFECT ========================================================= */
+      .gallery-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+      }
+      .gallery-card:hover img {
+        transform: scale(1.1);
+      } /* ========================================================= OVERLAY ========================================================= */
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9),
+          rgba(0, 0, 0, 0.2)
+        );
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 30px;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .gallery-card:hover .gallery-overlay {
+        opacity: 1;
+      } /* ========================================================= OVERLAY TEXT ========================================================= */
+      .gallery-overlay h4 {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+        transform: translateY(40px);
+        transition: 0.5s;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+      .gallery-card:hover .gallery-overlay h4 {
+        transform: translateY(0);
+      }
+
+      /* ================= CONTACT ================= */
+
+      .contact {
+        background:
+          linear-gradient(rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.95)),
+          url("https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070");
+        background-size: cover;
+        background-position: center;
+        padding: 120px 0;
+        position: relative;
+        overflow: hidden;
+      } /* ========================================================= CONTACT CARD ========================================================= */
+      .contact-card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 28px;
+        padding: 45px 30px;
+        text-align: center;
+        transition: 0.5s;
+        height: 100%;
+      }
+      .contact-card:hover {
+        transform: translateY(-12px);
+        background: rgba(255, 255, 255, 0.12);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      } /* ========================================================= ICON ========================================================= */
+      .contact-icon {
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        margin: 0 auto 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #f59e0b, #ffb703);
+        box-shadow: 0 15px 35px rgba(245, 158, 11, 0.35);
+        transition: 0.5s;
+      }
+      .contact-card:hover .contact-icon {
+        transform: rotateY(180deg) scale(1.1);
+      }
+      .contact-icon i {
+        font-size: 38px;
+        color: #fff;
+      } /* ========================================================= HEADING ========================================================= */
+      .contact-card h4 {
+        color: #fff;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ========================================================= TEXT ========================================================= */
+      .contact-card a,
+      .contact-card p {
+        color: #dbeafe;
+        text-decoration: none;
+        font-size: 17px;
+        line-height: 1.8;
+        transition: 0.3s;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+      .contact-card a:hover {
+        color: #f59e0b;
+      } /* ========================================================= SOCIAL MEDIA ========================================================= */
+      .social-media {
+        margin-top: 80px;
+        text-align: center;
+      }
+      .social-media h3 {
+        color: #fff;
+        font-size: 34px;
+        margin-bottom: 35px;
+        font-weight: 700;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ========================================================= SOCIAL ICONS ========================================================= */
+      .social-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        flex-wrap: wrap;
+      }
+      .social-icons a {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 30px;
+        color: #fff;
+        transition: 0.5s;
+        position: relative;
+        overflow: hidden;
+      } /* ========================================================= INDIVIDUAL COLORS ========================================================= */
+      .facebook {
+        background: #1877f2;
+      }
+      .instagram {
+        background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+      }
+      .youtube {
+        background: #ff0000;
+      }
+      .whatsapp {
+        background: #25d366;
+      } /* ========================================================= SOCIAL HOVER ========================================================= */
+      .social-icons a:hover {
+        transform: translateY(-10px) rotate(360deg);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      } /* ========================================================= TOP ARROW ========================================================= */
+      .top-arrow {
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #f59e0b, #ffb703);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 24px;
+        box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+        transition: 0.4s;
+        z-index: 999;
+      }
+      .top-arrow:hover {
+        transform: translateY(-8px);
+        color: #fff;
+      }
+
+      /* ================= MEMBERS SECTION ================= */
+      .members {
+        padding: 100px 0;
+        background: #f8fafc;
+      }
+      .member-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: 0.4s;
+      }
+      .member-card img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        transition: 0.5s;
+      }
+      .member-card:hover img {
+        transform: scale(1.1);
+      }
+      .member-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9),
+          rgba(0, 0, 0, 0.2)
+        );
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        text-align: center;
+        padding: 25px;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      .member-card:hover .member-overlay {
+        opacity: 1;
+      }
+      .member-info {
+        transform: translateY(40px);
+        transition: 0.5s;
+      }
+      .member-card:hover .member-info {
+        transform: translateY(0);
+      }
+      .member-info h4 {
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .member-info p {
+        color: #f59e0b;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+      .member-contact {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      .member-contact a {
+        text-decoration: none;
+        color: #fff;
+        background: #2563eb;
+        padding: 10px 18px;
+        border-radius: 30px;
+        transition: 0.3s;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .member-contact a:hover {
+        background: #f59e0b;
+        transform: translateY(-3px);
+      }
+      .member-contact a i {
+        margin-right: 8px;
+      }
+
+      /* ================= FOOTER ================= */
+
+      footer {
+        background: #020617;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      /* even css */
+
+      .events-section {
+        padding: 120px 0;
+        background: #f8fafc;
+        overflow: hidden;
+      } /* ========================================================= EVENT CARD ========================================================= */
+      .event-card {
+        background: #fff;
+        border-radius: 28px;
+        overflow: hidden;
+        transition: 0.5s;
+        height: 100%;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        position: relative;
+      }
+      .event-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+      } /* ========================================================= EVENT IMAGE ========================================================= */
+      .event-image {
+        position: relative;
+        overflow: hidden;
+      }
+      .event-image img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        transition: 0.6s;
+      }
+      .event-card:hover .event-image img {
+        transform: scale(1.1);
+      } /* ========================================================= EVENT DATE ========================================================= */
+      .event-date {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 80px;
+        height: 80px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #f59e0b, #ffb703);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 700;
+        box-shadow: 0 10px 25px rgba(245, 158, 11, 0.35);
+      }
+      .event-date span {
+        font-size: 12px;
+        letter-spacing: 1px;
+      } /* ========================================================= EVENT CONTENT ========================================================= */
+      .event-content {
+        padding: 35px 30px;
+      }
+      .event-content h3 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ========================================================= EVENT INFO ========================================================= */
+      .event-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 14px;
+      }
+      .event-info i {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #fef3c7;
+        color: #f59e0b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 14px;
+        font-size: 16px;
+      }
+      .event-info span {
+        color: #475569;
+        font-size: 16px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ========================================================= DESCRIPTION ========================================================= */
+      .event-content p {
+        color: #64748b;
+        line-height: 2;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      } /* ========================================================= BUTTON ========================================================= */
+      .event-btn {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        background: #0f172a;
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: 0.4s;
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+      .event-btn i {
+        margin-right: 10px;
+      }
+      .event-btn:hover {
+        background: #f59e0b;
+        color: #fff;
+        transform: translateY(-5px);
+      }
+
+      /* ================= RESPONSIVE ================= */
+
+      @media (max-width: 992px) {
+        .hero-content h1 {
+          font-size: 45px;
+        }
+        .section-about-title h2 {
+          font-size: 38px;
+        }
+        .about-content-box {
+          padding: 35px;
+        }
+        .about-image-wrapper {
+          min-height: 500px;
+        }
+        .section-service-title h2 {
+          font-size: 40px;
+        }
+        .service-card {
+          padding: 40px 28px;
+        }
+        .section-gallery-title h2 {
+          font-size: 40px;
+        }
+        .gallery-card img {
+          height: 320px;
+        }
+        .social-media h3 {
+          font-size: 30px;
+        }
+        .event-content h3 {
+          font-size: 26px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-slide {
+          min-height: 90vh;
+          padding: 120px 20px;
+        }
+
+        .member-card img {
+          height: 350px;
+        }
+
+        .hero-content h1 {
+          font-size: 38px;
+          line-height: 1.5;
+        }
+
+        .hero-content p {
+          font-size: 16px;
+          line-height: 1.9;
+        }
+
+        .hero-btn a {
+          padding: 13px 30px;
+          font-size: 14px;
+        }
+
+        .section-title h2 {
+          font-size: 30px;
+        }
+
+        .navbar-brand {
+          font-size: 22px;
+        }
+
+        .register-btn,
+        .login-btn {
+          margin-top: 10px;
+          display: block;
+          text-align: center;
+        }
+        .carousel-item {
+          transition: opacity 0.8s ease-in-out !important;
+          transform: none !important;
+        }
+        .carousel-item-next,
+        .carousel-item-prev,
+        .carousel-item.active {
+          transform: none !important;
+        }
+        .carousel-inner {
+          overflow: hidden;
+        }
+        .about-section {
+          padding: 70px 0;
+        }
+        .section-about-title {
+          margin-bottom: 50px;
+        }
+        .section-about-title h2 {
+          font-size: 30px;
+        }
+        .section-about-title p {
+          font-size: 16px;
+        }
+        .about-content-box h3 {
+          font-size: 26px;
+        }
+        .about-content-box p {
+          font-size: 15px;
+          line-height: 1.9;
+        }
+        .about-image-wrapper {
+          min-height: 400px;
+        }
+        .about-content-box {
+          padding: 28px;
+        }
+        .about-image-overlay {
+          left: 20px;
+          right: 20px;
+          bottom: 20px;
+          padding: 20px;
+        }
+
+        .services {
+          padding: 80px 0;
+        }
+        .section-service-title {
+          margin-bottom: 50px;
+        }
+        .section-service-title h2 {
+          font-size: 32px;
+        }
+        .section-service-title p {
+          font-size: 16px;
+        }
+        .service-card {
+          padding: 35px 25px;
+          border-radius: 24px;
+        }
+        .service-icon {
+          width: 85px;
+          height: 85px;
+          margin-bottom: 25px;
+        }
+        .service-icon i {
+          font-size: 34px;
+        }
+        .service-card h4 {
+          font-size: 24px;
+        }
+        .service-card p {
+          font-size: 15px;
+          line-height: 1.9;
+        }
+        .gallery {
+          padding: 80px 0;
+        }
+        .section-gallery-title {
+          margin-bottom: 50px;
+        }
+        .section-gallery-title h2 {
+          font-size: 32px;
+        }
+        .section-gallery-title p {
+          font-size: 16px;
+        }
+        .gallery-card {
+          border-radius: 20px;
+        }
+        .gallery-card img {
+          height: 280px;
+        }
+        .gallery-overlay {
+          opacity: 1;
+          padding: 20px;
+        }
+        .gallery-overlay h4 {
+          font-size: 20px;
+          transform: translateY(0);
+        }
+        .contact {
+          padding: 80px 0;
+        }
+        .contact-card {
+          padding: 35px 25px;
+          border-radius: 22px;
+        }
+        .contact-icon {
+          width: 80px;
+          height: 80px;
+        }
+        .contact-icon i {
+          font-size: 32px;
+        }
+        .contact-card h4 {
+          font-size: 24px;
+        }
+        .contact-card a,
+        .contact-card p {
+          font-size: 15px;
+        }
+        .social-media {
+          margin-top: 60px;
+        }
+        .social-media h3 {
+          font-size: 28px;
+        }
+        .social-icons {
+          gap: 16px;
+        }
+        .social-icons a {
+          width: 65px;
+          height: 65px;
+          font-size: 26px;
+        }
+        .top-arrow {
+          width: 52px;
+          height: 52px;
+          font-size: 20px;
+          right: 18px;
+          bottom: 18px;
+        }
+      }
+      @media (max-width: 480px) {
+        .section-title h2 {
+          font-size: 26px;
+        }
+        .about-content-box h3 {
+          font-size: 22px;
+        }
+        .about-point span {
+          font-size: 15px;
+        }
+        .about-btn a {
+          width: 100%;
+          text-align: center;
+        }
+        .hero-content h1 {
+          font-size: 30px;
+        }
+        .hero-content p {
+          font-size: 15px;
+        }
+        .hero-btn a {
+          width: 220px;
+          display: block;
+          margin: 12px auto;
+        }
+        section-service-title h2 {
+          font-size: 28px;
+        }
+        .service-card h4 {
+          font-size: 22px;
+        }
+        .service-card {
+          padding: 30px 22px;
+        }
+        .section-gallery-title h2 {
+          font-size: 28px;
+        }
+        .gallery-card img {
+          height: 240px;
+        }
+        .gallery-overlay h4 {
+          font-size: 18px;
+        }
+        .social-media h3 {
+          font-size: 24px;
+        }
+        .social-icons a {
+          width: 58px;
+          height: 58px;
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"> Yadav <span>Society</span> </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#upcomingEvent">Upcoming Events</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#register">Register</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#members">Members</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="btn register-btn ms-lg-3"> Register </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="btn login-btn"> Login </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero-slider">
+      <!-- Bootstrap Carousel -->
+      <div
+        id="heroCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-touch="false"
+        data-bs-interval="4000"
+      >
+        <!-- ========================================================= CAROUSEL INDICATORS ========================================================= -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide-to="2"
+          ></button>
+        </div>
+        <!-- ========================================================= CAROUSEL ITEMS ========================================================= -->
+        <div class="carousel-inner">
+          <!-- ========================================================= SLIDE 1 ========================================================= -->
+          <div class="carousel-item active">
+            <div class="hero-slide hero-slide-1">
+              <div class="container">
+                <div class="hero-content" data-aos="zoom-in">
+                  <h1>
+                    मिलकर बनाएँ <br />
+                    <span>बेहतर समाज</span>
+                  </h1>
+                  <p>
+                    यादव वेलफेयर सोसाइटी शिक्षा, सामाजिक एकता, युवा विकास और
+                    समाज कल्याण के लिए कार्य करती है।
+                  </p>
+                  <div class="hero-btn">
+                    <a href="#" class="btn1"> समाज से जुड़ें </a>
+                    <a href="#" class="btn2"> और जानें </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ========================================================= SLIDE 2 ========================================================= -->
+          <div class="carousel-item">
+            <div class="hero-slide hero-slide-2">
+              <div class="container">
+                <div class="hero-content" data-aos="zoom-in">
+                  <h1>
+                    शिक्षा और विकास <br />
+                    <span>हमारा लक्ष्य</span>
+                  </h1>
+                  <p>
+                    हमारा उद्देश्य समाज के हर युवा को शिक्षित, जागरूक और
+                    आत्मनिर्भर बनाना है।
+                  </p>
+                  <div class="hero-btn">
+                    <a href="#" class="btn1"> शिक्षा अभियान </a>
+                    <a href="#" class="btn2"> सहयोग करें </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ========================================================= SLIDE 3 ========================================================= -->
+          <div class="carousel-item">
+            <div class="hero-slide hero-slide-3">
+              <div class="container">
+                <div class="hero-content" data-aos="zoom-in">
+                  <h1>
+                    नशा मुक्त और <br />
+                    <span>अपराध मुक्त समाज</span>
+                  </h1>
+                  <p>
+                    समाज को शराब, नशाखोरी और अपराध से मुक्त बनाना हमारी
+                    प्राथमिकता है।
+                  </p>
+                  <div class="hero-btn">
+                    <a href="#" class="btn1"> अभियान से जुड़ें </a>
+                    <a href="#" class="btn2"> संपर्क करें </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about-section" id="about">
+      <div class="container">
+        <!-- SECTION TITLE -->
+        <div class="section-about-title" data-aos="fade-up">
+          <span class="about-tag"> यादव वेलफेयर सोसाइटी </span>
+          <h2>
+            समाज के विकास के लिए <br />
+            एक मजबूत पहल
+          </h2>
+          <p>शिक्षित, नशा मुक्त, अपराध मुक्त और विकसित समाज की ओर</p>
+        </div>
+        <!-- MAIN ROW -->
+        <div class="row align-items-stretch g-5">
+          <!-- IMAGE SIDE -->
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="about-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070"
+                alt="Yadav Welfare Society"
+              />
+              <div class="about-image-overlay">
+                <div>
+                  <h3>10+ वर्ष</h3>
+                  <p>समाज सेवा का अनुभव</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- CONTENT SIDE -->
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="about-content-box">
+              <h3>समाज की एकता और प्रगति हमारी पहचान</h3>
+              <p>
+                यादव वेलफेयर सोसाइटी एक सामाजिक संगठन है जिसका मुख्य उद्देश्य
+                समाज को शिक्षित, जागरूक, नशा मुक्त, अपराध मुक्त और आत्मनिर्भर
+                बनाना है। हमारा विश्वास है कि एक मजबूत समाज की नींव शिक्षा,
+                संस्कार, अनुशासन और सामाजिक एकता पर आधारित होती है।
+              </p>
+              <p>
+                संस्था युवाओं को बेहतर शिक्षा, प्रतियोगी परीक्षाओं की तैयारी,
+                करियर मार्गदर्शन और कौशल विकास के लिए प्रेरित करती है ताकि हर
+                युवा अपने जीवन में सफलता प्राप्त कर सके और समाज के विकास में
+                योगदान दे सके।
+              </p>
+              <p>
+                हम समाज में शराब और अन्य नशे के खिलाफ जागरूकता अभियान चलाते हैं।
+                हमारा लक्ष्य एक ऐसा समाज बनाना है जहाँ युवा अपनी ऊर्जा शिक्षा,
+                रोजगार, खेल और सकारात्मक कार्यों में लगाएँ।
+              </p>
+              <!-- HIGHLIGHT POINTS -->
+              <div class="about-points">
+                <div class="about-point">
+                  <i class="fa-solid fa-check"></i>
+                  <span> शिक्षित और जागरूक समाज </span>
+                </div>
+                <div class="about-point">
+                  <i class="fa-solid fa-check"></i>
+                  <span> नशा मुक्त एवं अपराध मुक्त समाज </span>
+                </div>
+                <div class="about-point">
+                  <i class="fa-solid fa-check"></i>
+                  <span> युवा और महिला सशक्तिकरण </span>
+                </div>
+                <div class="about-point">
+                  <i class="fa-solid fa-check"></i>
+                  <span> समाज के विकास और एकता पर विशेष ध्यान </span>
+                </div>
+              </div>
+              <!-- BUTTON -->
+              <div class="about-btn"><a href="#"> और अधिक जानें </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COUNTER ================= -->
+
+    <section class="counter-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <div class="counter-box" data-aos="zoom-in">
+              <h2>5000+</h2>
+              <p>Members</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="counter-box" data-aos="zoom-in">
+              <h2>1200+</h2>
+              <p>Students Helped</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="counter-box" data-aos="zoom-in">
+              <h2>350+</h2>
+              <p>Events</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="counter-box" data-aos="zoom-in">
+              <h2>800+</h2>
+              <p>Volunteers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="events-section" id="upcomingEvent">
+      <div class="container">
+        <!-- ========================================================= SECTION TITLE ========================================================= -->
+        <div class="section-title" data-aos="fade-up">
+          <h2>आगामी कार्यक्रम</h2>
+          <p>समाज विकास और जागरूकता के लिए आयोजित होने वाले कार्यक्रम</p>
+        </div>
+        <!-- ========================================================= EVENTS ROW ========================================================= -->
+        <div class="row g-4">
+          <!-- ========================================================= EVENT 1 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="event-card" data-aos="zoom-in">
+              <!-- EVENT IMAGE -->
+              <div class="event-image">
+                <img
+                  src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070"
+                  alt="Event"
+                />
+                <div class="event-date">15 <span>JULY</span></div>
+              </div>
+              <!-- EVENT CONTENT -->
+              <div class="event-content">
+                <h3>शिक्षा जागरूकता अभियान</h3>
+                <!-- TIME -->
+                <div class="event-info">
+                  <i class="fa-solid fa-clock"></i>
+                  <span> सुबह 10:00 बजे </span>
+                </div>
+                <!-- PLACE -->
+                <div class="event-info">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span> पटना, बिहार </span>
+                </div>
+                <!-- DESCRIPTION -->
+                <p>
+                  विद्यार्थियों और युवाओं को शिक्षा और करियर के प्रति जागरूक
+                  करने हेतु विशेष कार्यक्रम।
+                </p>
+                <!-- LOCATION BUTTON -->
+                <a
+                  href="https://maps.google.com/?q=Patna+Bihar"
+                  target="_blank"
+                  class="event-btn"
+                >
+                  <i class="fa-solid fa-location-arrow"></i> लोकेशन देखें
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ========================================================= EVENT 2 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="event-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="event-image">
+                <img
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2070"
+                  alt="Event"
+                />
+                <div class="event-date">20 <span>JULY</span></div>
+              </div>
+              <div class="event-content">
+                <h3>नशा मुक्त समाज अभियान</h3>
+                <div class="event-info">
+                  <i class="fa-solid fa-clock"></i>
+                  <span> दोपहर 1:00 बजे </span>
+                </div>
+                <div class="event-info">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span> गया, बिहार </span>
+                </div>
+                <p>
+                  युवाओं को नशे से दूर रखने और स्वस्थ समाज बनाने हेतु जागरूकता
+                  कार्यक्रम।
+                </p>
+                <a
+                  href="https://maps.google.com/?q=Gaya+Bihar"
+                  target="_blank"
+                  class="event-btn"
+                >
+                  <i class="fa-solid fa-location-arrow"></i> लोकेशन देखें
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ========================================================= EVENT 3 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="event-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="event-image">
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071"
+                  alt="Event"
+                />
+                <div class="event-date">28 <span>JULY</span></div>
+              </div>
+              <div class="event-content">
+                <h3>रोजगार एवं करियर मेला</h3>
+                <div class="event-info">
+                  <i class="fa-solid fa-clock"></i>
+                  <span> सुबह 11:00 बजे </span>
+                </div>
+                <div class="event-info">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span> दरभंगा, बिहार </span>
+                </div>
+                <p>
+                  युवाओं को रोजगार और करियर के अवसरों से जोड़ने के लिए विशेष
+                  आयोजन।
+                </p>
+                <a
+                  href="https://maps.google.com/?q=Darbhanga+Bihar"
+                  target="_blank"
+                  class="event-btn"
+                >
+                  <i class="fa-solid fa-location-arrow"></i> लोकेशन देखें
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services" id="services">
+      <div class="container">
+        <!-- ========================================================= SECTION TITLE ========================================================= -->
+        <div class="section-service-title" data-aos="fade-up">
+          <h2>हमारी सेवाएँ</h2>
+          <p>समाज के विकास और जागरूकता के लिए हमारी प्रमुख पहल</p>
+        </div>
+        <!-- ========================================================= SERVICES ROW ========================================================= -->
+        <div class="row g-4">
+          <!-- ========================================================= SERVICE 1 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card" data-aos="zoom-in">
+              <div class="service-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h4>शिक्षा जागरूकता</h4>
+              <p>
+                समाज के बच्चों और युवाओं को बेहतर शिक्षा, प्रतियोगी परीक्षाओं और
+                करियर मार्गदर्शन के लिए प्रेरित करना।
+              </p>
+            </div>
+          </div>
+          <!-- ========================================================= SERVICE 2 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="service-icon">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <h4>करियर काउंसलिंग</h4>
+              <p>
+                युवाओं को नौकरी, कौशल विकास और सही करियर चुनने के लिए मार्गदर्शन
+                और सहायता प्रदान करना।
+              </p>
+            </div>
+          </div>
+          <!-- ========================================================= SERVICE 3 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="service-icon"><i class="fa-solid fa-ban"></i></div>
+              <h4>दहेज प्रथा बंद</h4>
+              <p>
+                समाज में दहेज प्रथा को खत्म करने और सादगीपूर्ण विवाह को बढ़ावा
+                देने के लिए जागरूकता अभियान चलाना।
+              </p>
+            </div>
+          </div>
+          <!-- ========================================================= SERVICE 4 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card" data-aos="zoom-in">
+              <div class="service-icon">
+                <i class="fa-solid fa-wine-bottle"></i>
+              </div>
+              <h4>नशा मुक्त अभियान</h4>
+              <p>
+                शराब और अन्य नशे के खिलाफ अभियान चलाकर युवाओं को स्वस्थ और
+                सकारात्मक जीवन की ओर प्रेरित करना।
+              </p>
+            </div>
+          </div>
+          <!-- ========================================================= SERVICE 5 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="service-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h4>अपराध मुक्त समाज</h4>
+              <p>
+                समाज में अनुशासन, नैतिक शिक्षा और भाईचारे को बढ़ावा देकर अपराध
+                मुक्त वातावरण तैयार करना।
+              </p>
+            </div>
+          </div>
+          <!-- ========================================================= SERVICE 6 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="service-icon">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </div>
+              <h4>स्वास्थ्य सहायता</h4>
+              <p>
+                मुफ्त स्वास्थ्य जांच, रक्तदान शिविर और स्वास्थ्य जागरूकता
+                कार्यक्रमों का आयोजन करना।
+              </p>
+            </div>
+          </div>
+          <!-- ========================================================= SERVICE 7 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card" data-aos="zoom-in">
+              <div class="service-icon">
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <h4>समाजिक एकता</h4>
+              <p>
+                समाज में एकता, भाईचारा और सहयोग की भावना को मजबूत बनाने के लिए
+                विभिन्न कार्यक्रम आयोजित करना।
+              </p>
+            </div>
+          </div>
+          <!-- ========================================================= SERVICE 8 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="service-icon">
+                <i class="fa-solid fa-person-dress"></i>
+              </div>
+              <h4>महिला सशक्तिकरण</h4>
+              <p>
+                महिलाओं को आत्मनिर्भर बनाने, शिक्षा और रोजगार के अवसर प्रदान
+                करने के लिए विशेष पहल।
+              </p>
+            </div>
+          </div>
+          <!-- ========================================================= SERVICE 9 ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="service-icon">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <h4>समाज विकास</h4>
+              <p>
+                शिक्षा, रोजगार, स्वच्छता और सामाजिक सुधार के माध्यम से समाज को
+                विकसित और आत्मनिर्भर बनाना।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REGISTER ================= -->
+
+    <section class="register-section" id="register">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>अभी रजिस्टर करें</h2>
+
+          <p>हमारे समाज का हिस्सा बनें</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="form-box" data-aos="zoom-in">
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="पूरा नाम"
+                    />
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="ईमेल पता"
+                    />
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="मोबाइल नंबर"
+                    />
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="पेशा"
+                    />
+                  </div>
+
+                  <div class="col-12 mb-3">
+                    <textarea
+                      class="form-control"
+                      placeholder="आपका पता"
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <button class="submit-btn">अभी रजिस्टर करें</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <!-- ========================================================= SECTION TITLE ========================================================= -->
+        <div class="section-gallery-title" data-aos="fade-up">
+          <h2>हमारी गैलरी</h2>
+          <p>समाज सेवा, सामाजिक कार्यक्रम और जागरूकता अभियान की झलकियाँ</p>
+        </div>
+        <!-- ========================================================= GALLERY ROW ========================================================= -->
+        <div class="row g-4">
+          <!-- IMAGE 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card" data-aos="zoom-in">
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2070"
+                alt="Gallery Image"
+              />
+              <div class="gallery-overlay"><h4>समाज सेवा कार्यक्रम</h4></div>
+            </div>
+          </div>
+          <!-- IMAGE 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card" data-aos="zoom-in" data-aos-delay="100">
+              <img
+                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070"
+                alt="Gallery Image"
+              />
+              <div class="gallery-overlay"><h4>शिक्षा जागरूकता अभियान</h4></div>
+            </div>
+          </div>
+          <!-- IMAGE 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card" data-aos="zoom-in" data-aos-delay="200">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071"
+                alt="Gallery Image"
+              />
+              <div class="gallery-overlay"><h4>युवा विकास कार्यक्रम</h4></div>
+            </div>
+          </div>
+          <!-- IMAGE 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card" data-aos="zoom-in">
+              <img
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070"
+                alt="Gallery Image"
+              />
+              <div class="gallery-overlay"><h4>महिला सशक्तिकरण</h4></div>
+            </div>
+          </div>
+          <!-- IMAGE 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card" data-aos="zoom-in" data-aos-delay="100">
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070"
+                alt="Gallery Image"
+              />
+              <div class="gallery-overlay"><h4>समाज विकास बैठक</h4></div>
+            </div>
+          </div>
+          <!-- IMAGE 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-card" data-aos="zoom-in" data-aos-delay="200">
+              <img
+                src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2070"
+                alt="Gallery Image"
+              />
+              <div class="gallery-overlay">
+                <h4>स्वास्थ्य जागरूकता अभियान</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="members" id="members">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>हमारे सदस्य</h2>
+
+          <p>समाज कल्याण के लिए समर्पित लोग</p>
+        </div>
+        <div class="row g-4">
+          <!-- MEMBER 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="member-card" data-aos="zoom-in">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974"
+                alt="Member"
+              />
+              <div class="member-overlay">
+                <div class="member-info">
+                  <h4>Rohit Yadav</h4>
+                  <p>President</p>
+                  <div class="member-contact">
+                    <!-- CALL -->
+                    <a href="tel:+919876543210">
+                      <i class="fa-solid fa-phone"></i> Call
+                    </a>
+                    <!-- WHATSAPP -->
+                    <a href="https://wa.me/919876543210" target="_blank">
+                      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MEMBER 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="member-card" data-aos="zoom-in">
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974"
+                alt="Member"
+              />
+              <div class="member-overlay">
+                <div class="member-info">
+                  <h4>Aman Kumar</h4>
+                  <p>Vice President</p>
+                  <div class="member-contact">
+                    <a href="tel:+919999999999">
+                      <i class="fa-solid fa-phone"></i> Call
+                    </a>
+                    <a href="https://wa.me/919999999999" target="_blank">
+                      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MEMBER 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="member-card" data-aos="zoom-in">
+              <img
+                src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?q=80&w=1974"
+                alt="Member"
+              />
+              <div class="member-overlay">
+                <div class="member-info">
+                  <h4>Vikas Yadav</h4>
+                  <p>Social Coordinator</p>
+                  <div class="member-contact">
+                    <a href="tel:+918888888888">
+                      <i class="fa-solid fa-phone"></i> Call
+                    </a>
+                    <a href="https://wa.me/918888888888" target="_blank">
+                      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MEMBER 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="member-card" data-aos="zoom-in">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974"
+                alt="Member"
+              />
+              <div class="member-overlay">
+                <div class="member-info">
+                  <h4>Pooja Yadav</h4>
+                  <p>Women Welfare Head</p>
+                  <div class="member-contact">
+                    <a href="tel:+917777777777">
+                      <i class="fa-solid fa-phone"></i> Call
+                    </a>
+                    <a href="https://wa.me/917777777777" target="_blank">
+                      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MEMBER 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="member-card" data-aos="zoom-in">
+              <img
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974"
+                alt="Member"
+              />
+              <div class="member-overlay">
+                <div class="member-info">
+                  <h4>Deepak Kumar</h4>
+                  <p>Education Advisor</p>
+                  <div class="member-contact">
+                    <a href="tel:+916666666666">
+                      <i class="fa-solid fa-phone"></i> Call
+                    </a>
+                    <a href="https://wa.me/916666666666" target="_blank">
+                      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MEMBER 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="member-card" data-aos="zoom-in">
+              <img
+                src="https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=1974"
+                alt="Member"
+              />
+              <div class="member-overlay">
+                <div class="member-info">
+                  <h4>Sachin Yadav</h4>
+                  <p>Youth Leader</p>
+                  <div class="member-contact">
+                    <a href="tel:+915555555555">
+                      <i class="fa-solid fa-phone"></i> Call
+                    </a>
+                    <a href="https://wa.me/915555555555" target="_blank">
+                      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <!-- ========================================================= SECTION TITLE ========================================================= -->
+        <div class="section-title" data-aos="fade-up">
+          <h2 class="text-white">संपर्क करें</h2>
+          <p class="text-light">
+            हमारे समाज से जुड़ें और समाज विकास में योगदान दें
+          </p>
+        </div>
+        <!-- ========================================================= CONTACT ROW ========================================================= -->
+        <div class="row g-4">
+          <!-- ========================================================= PHONE ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-card" data-aos="zoom-in">
+              <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+              <h4>मोबाइल नंबर</h4>
+              <a href="tel:+919876543210"> +91 9876543210 </a>
+            </div>
+          </div>
+          <!-- ========================================================= EMAIL ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <h4>ईमेल पता</h4>
+              <a href="mailto:info@yadavsociety.com"> info@yadavsociety.com </a>
+            </div>
+          </div>
+          <!-- ========================================================= LOCATION ========================================================= -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h4>स्थान</h4>
+              <p>बिहार, भारत</p>
+            </div>
+          </div>
+        </div>
+        <!-- ========================================================= SOCIAL MEDIA ========================================================= -->
+        <div class="social-media" data-aos="fade-up">
+          <h3>सोशल मीडिया पर जुड़ें</h3>
+          <div class="social-icons">
+            <!-- FACEBOOK -->
+            <a href="https://facebook.com" target="_blank" class="facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <!-- INSTAGRAM -->
+            <a href="https://instagram.com" target="_blank" class="instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <!-- YOUTUBE -->
+            <a href="https://youtube.com" target="_blank" class="youtube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <!-- WHATSAPP -->
+            <a
+              href="https://wa.me/919876543210"
+              target="_blank"
+              class="whatsapp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="#" class="top-arrow"> <i class="fa-solid fa-arrow-up"></i> </a>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <p>© 2026 Yadav Welfare Society | All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      // Initialize Animation
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+
+      // Navbar Background Change
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+
+        if (window.scrollY > 50) {
+          navbar.style.background = "#020617";
+        } else {
+          navbar.style.background = "#0f172a";
+        }
+      });
+    </script>
+  </body>
+</html>
