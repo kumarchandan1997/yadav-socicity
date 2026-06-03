@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>दुर्घटना सहायता अभियान | यादव वेलफेयर सोसाइटी</title>
+
+    <!-- Bootstrap -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- AOS -->
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =====================================================
+           GLOBAL CSS
+        ===================================================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Noto Sans Devanagari", sans-serif;
+        background: #f8fafc;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+      .navbar {
+        background: #0f172a;
+        padding: 15px 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .navbar-brand {
+        color: #fff !important;
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .navbar-brand span {
+        color: #f59e0b;
+      }
+
+      .nav-link {
+        color: #fff !important;
+        margin-left: 15px;
+        transition: 0.3s;
+      }
+
+      .nav-link:hover {
+        color: #f59e0b !important;
+      }
+
+      /* =====================================================
+           HERO SECTION
+        ===================================================== */
+
+      .detail-hero {
+        min-height: 70vh;
+
+        background:
+          linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)),
+          url("https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=2070");
+
+        background-size: cover;
+        background-position: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+        color: #fff;
+      }
+
+      .detail-hero h1 {
+        font-size: 65px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .detail-hero span {
+        color: #f59e0b;
+      }
+
+      .detail-hero p {
+        font-size: 22px;
+        max-width: 900px;
+        margin: auto;
+        line-height: 1.9;
+      }
+
+      /* =====================================================
+           SECTION TITLE
+        ===================================================== */
+
+      .section-title {
+        margin-bottom: 50px;
+      }
+
+      .section-title h2 {
+        font-size: 42px;
+        color: #0f172a;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .section-title p {
+        color: #64748b;
+        font-size: 18px;
+      }
+
+      /* =====================================================
+           INCIDENT SECTION
+        ===================================================== */
+
+      .incident-section {
+        padding: 120px 0;
+        background: #fff;
+      }
+
+      .incident-image img {
+        border-radius: 25px;
+
+        height: 500px;
+        width: 100%;
+
+        object-fit: cover;
+
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      .incident-content {
+        padding-left: 30px;
+      }
+
+      .incident-content h3 {
+        font-size: 36px;
+        color: #0f172a;
+        font-weight: 700;
+        margin-bottom: 25px;
+      }
+
+      .incident-content p {
+        line-height: 2;
+        color: #475569;
+        margin-bottom: 20px;
+        font-size: 17px;
+      }
+
+      /* =====================================================
+           INFO BOX
+        ===================================================== */
+
+      .info-box {
+        background: #f8fafc;
+
+        padding: 25px;
+
+        border-radius: 20px;
+
+        margin-top: 30px;
+
+        border-left: 5px solid #f59e0b;
+      }
+
+      .info-box ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .info-box li {
+        padding: 10px 0;
+        color: #334155;
+      }
+
+      .info-box i {
+        color: #f59e0b;
+        margin-right: 10px;
+      }
+
+      .help-section {
+        padding: 100px 0;
+        background: #f8fafc;
+      }
+
+      .help-card {
+        background: #fff;
+        padding: 40px 30px;
+        border-radius: 25px;
+        text-align: center;
+        height: 100%;
+        transition: 0.4s;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .help-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .help-icon {
+        width: 90px;
+        height: 90px;
+        margin: auto;
+        border-radius: 50%;
+        background: #f59e0b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+      }
+
+      .help-icon i {
+        font-size: 35px;
+        color: #fff;
+      }
+
+      .help-card h4 {
+        margin-bottom: 15px;
+        font-weight: 700;
+        color: #0f172a;
+      }
+
+      .help-card p {
+        color: #64748b;
+        line-height: 1.9;
+      }
+
+      .summary-section {
+        padding: 80px 0;
+        background: #0f172a;
+      }
+
+      .summary-card {
+        background: #1e293b;
+        color: #fff;
+        padding: 35px 25px;
+        border-radius: 20px;
+        text-align: center;
+      }
+
+      .summary-card h2 {
+        color: #f59e0b;
+        font-size: 42px;
+        font-weight: 700;
+      }
+
+      .summary-card p {
+        margin-top: 10px;
+      }
+
+      .donor-section {
+        padding: 120px 0;
+        background: #fff;
+      }
+
+      .donor-table {
+        background: #fff;
+      }
+
+      .donor-table thead {
+        background: #0f172a;
+        color: #fff;
+      }
+
+      .donor-table th,
+      .donor-table td {
+        padding: 15px;
+        vertical-align: middle;
+      }
+
+      .donor-table tfoot {
+        background: #f59e0b;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .expense-section {
+        padding: 120px 0;
+        background: #f8fafc;
+      }
+
+      .expense-table thead {
+        background: #0f172a;
+        color: #fff;
+      }
+
+      .expense-table tfoot {
+        background: #f59e0b;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .expense-table th,
+      .expense-table td {
+        padding: 15px;
+      }
+
+      .incident-gallery {
+        padding: 120px 0;
+        background: #fff;
+      }
+
+      .gallery-card {
+        overflow: hidden;
+        border-radius: 25px;
+      }
+
+      .gallery-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: 0.5s;
+      }
+
+      .gallery-card:hover img {
+        transform: scale(1.08);
+      }
+
+      .location-section {
+        padding: 120px 0;
+        background: #f8fafc;
+      }
+
+      .location-card {
+        background: #fff;
+        padding: 50px;
+        border-radius: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .location-card i {
+        font-size: 60px;
+        color: #f59e0b;
+        margin-bottom: 20px;
+      }
+
+      .location-card h3 {
+        color: #0f172a;
+        margin-bottom: 15px;
+      }
+
+      .location-card p {
+        color: #64748b;
+        line-height: 1.9;
+      }
+
+      .location-btn {
+        display: inline-block;
+        margin-top: 20px;
+        background: #f59e0b;
+        color: #fff;
+        padding: 14px 30px;
+        border-radius: 50px;
+        transition: 0.4s;
+      }
+
+      .location-btn:hover {
+        background: #0f172a;
+        color: #fff;
+      }
+
+      .footer {
+        background: #0f172a;
+        color: #fff;
+        padding: 80px 0 30px;
+      }
+
+      .footer h4 {
+        margin-bottom: 20px;
+        color: #f59e0b;
+      }
+
+      .footer p {
+        color: #cbd5e1;
+        line-height: 1.9;
+      }
+
+      .footer ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer ul li a {
+        color: #cbd5e1;
+      }
+
+      .footer ul li a:hover {
+        color: #f59e0b;
+      }
+
+      .social-icons a {
+        width: 45px;
+        height: 45px;
+        background: #1e293b;
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: 0.4s;
+      }
+
+      .social-icons a:hover {
+        background: #f59e0b;
+      }
+
+      .top-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        background: #f59e0b;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+      }
+
+      .top-btn:hover {
+        color: #fff;
+        background: #0f172a;
+      }
+
+      /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+      @media (max-width: 768px) {
+        .detail-hero {
+          min-height: 60vh;
+          padding: 120px 20px 80px;
+        }
+
+        .detail-hero h1 {
+          font-size: 36px;
+        }
+
+        .detail-hero p {
+          font-size: 16px;
+        }
+
+        .incident-image img {
+          height: 300px;
+        }
+
+        .incident-content {
+          padding-left: 0;
+          margin-top: 30px;
+        }
+
+        .incident-content h3 {
+          font-size: 28px;
+        }
+
+        .section-title h2 {
+          font-size: 30px;
+        }
+
+        .help-section,
+        .donor-section {
+          padding: 70px 0;
+        }
+
+        .summary-card h2 {
+          font-size: 32px;
+        }
+        .expense-section,
+        .incident-gallery,
+        .location-section {
+          padding: 70px 0;
+        }
+
+        .gallery-card img {
+          height: 220px;
+        }
+
+        .location-card {
+          padding: 30px;
+        }
+
+        .footer {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          यादव <span>सोसाइटी</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link"> होम </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="achievements.html" class="nav-link"> उपलब्धियाँ </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="index.html#contact" class="nav-link"> संपर्क </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =====================================================
+     HERO
+===================================================== -->
+
+    <section class="detail-hero">
+      <div class="container" data-aos="zoom-in">
+        <h1>
+          सड़क दुर्घटना पीड़ित
+          <span>परिवार सहायता अभियान</span>
+        </h1>
+
+        <p>
+          यादव वेलफेयर सोसाइटी द्वारा दुर्घटना पीड़ित परिवार की सहायता, आर्थिक
+          सहयोग और अस्पताल व्यवस्था का विस्तृत विवरण।
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     INCIDENT DETAILS
+===================================================== -->
+
+    <section class="incident-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="incident-image">
+              <img src="images/accident-main.jpg" alt="Accident Help" />
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="incident-content">
+              <h3>घटना की पूरी जानकारी</h3>
+
+              <p>
+                दिनांक 12 जून 2026 को अथमलगोला निवासी श्री राम यादव सड़क
+                दुर्घटना में गंभीर रूप से घायल हो गए।
+              </p>
+
+              <p>
+                परिवार की आर्थिक स्थिति कमजोर होने के कारण उपचार में कठिनाई
+                उत्पन्न हो रही थी।
+              </p>
+
+              <p>
+                सूचना मिलते ही यादव वेलफेयर सोसाइटी के सदस्य अस्पताल पहुँचे और
+                तुरंत सहायता अभियान शुरू किया गया।
+              </p>
+
+              <div class="info-box">
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-user"></i>
+                    लाभार्थी : श्री राम यादव
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-location-dot"></i>
+                    स्थान : अथमलगोला, पटना
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-calendar"></i>
+                    दिनांक : 12 जून 2026
+                  </li>
+
+                  <li>
+                    <i class="fa-solid fa-hospital"></i>
+                    अस्पताल : PMCH पटना
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     SOCIETY HELP SECTION
+===================================================== -->
+
+    <section class="help-section">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>समाज द्वारा की गई सहायता</h2>
+
+          <p>दुर्घटना पीड़ित परिवार के लिए किए गए सहयोग कार्य</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="help-card" data-aos="zoom-in">
+              <div class="help-icon">
+                <i class="fa-solid fa-hospital"></i>
+              </div>
+
+              <h4>अस्पताल सहायता</h4>
+
+              <p>
+                घायल व्यक्ति को तत्काल अस्पताल पहुँचाया गया तथा भर्ती प्रक्रिया
+                पूरी कराई गई।
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="help-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="help-icon">
+                <i class="fa-solid fa-money-bill-wave"></i>
+              </div>
+
+              <h4>आर्थिक सहयोग</h4>
+
+              <p>
+                गांव और समाज के लोगों से सहयोग राशि एकत्रित कर परिवार की सहायता
+                की गई।
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="help-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="help-icon">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+
+              <h4>परिवार सहायता</h4>
+
+              <p>
+                पीड़ित परिवार को राशन, दवा तथा अन्य आवश्यक वस्तुएँ उपलब्ध कराई
+                गईं।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     SUMMARY SECTION
+===================================================== -->
+
+    <section class="summary-section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="summary-card" data-aos="fade-up">
+              <h2>₹1,20,000</h2>
+
+              <p>कुल सहायता राशि</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="summary-card" data-aos="fade-up" data-aos-delay="100">
+              <h2>125</h2>
+
+              <p>सहयोगकर्ता</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="summary-card" data-aos="fade-up" data-aos-delay="200">
+              <h2>7 दिन</h2>
+
+              <p>सहायता अभियान</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="summary-card" data-aos="fade-up" data-aos-delay="300">
+              <h2>100%</h2>
+
+              <p>राशि उपयोग</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+     DONOR TABLE
+===================================================== -->
+
+    <section class="donor-section">
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>सहयोगकर्ताओं की सूची</h2>
+
+          <p>दुर्घटना सहायता अभियान में सहयोग देने वाले लोग</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-bordered donor-table">
+            <thead>
+              <tr>
+                <th>क्रम संख्या</th>
+
+                <th>नाम</th>
+
+                <th>पद / पहचान</th>
+
+                <th>सहयोग राशि</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>1</td>
+
+                <td>श्री रमेश यादव</td>
+
+                <td>मुखिया</td>
+
+                <td>₹10,000</td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+
+                <td>श्री सुरेश यादव</td>
+
+                <td>सरपंच</td>
+
+                <td>₹8,000</td>
+              </tr>
+
+              <tr>
+                <td>3</td>
+
+                <td>श्री अजय कुमार</td>
+
+                <td>वार्ड सदस्य</td>
+
+                <td>₹5,000</td>
+              </tr>
+
+              <tr>
+                <td>4</td>
+
+                <td>यादव वेलफेयर सोसाइटी</td>
+
+                <td>सामूहिक सहयोग</td>
+
+                <td>₹25,000</td>
+              </tr>
+
+              <tr>
+                <td>5</td>
+
+                <td>ग्रामवासी सहयोग</td>
+
+                <td>गांव के लोग</td>
+
+                <td>₹72,000</td>
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr>
+                <th colspan="3">कुल राशि</th>
+
+                <th>₹1,20,000</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+  <!-- =====================================================
+     EXPENSE SECTION
+===================================================== -->
+
+<section class="expense-section">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                सहायता राशि का उपयोग
+            </h2>
+
+            <p>
+                एकत्रित राशि का उपयोग कहाँ किया गया
+            </p>
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered expense-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            क्रम संख्या
+                        </th>
+
+                        <th>
+                            उपयोग
+                        </th>
+
+                        <th>
+                            राशि
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>अस्पताल शुल्क</td>
+                        <td>₹55,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>ऑपरेशन खर्च</td>
+                        <td>₹30,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>दवा एवं जांच</td>
+                        <td>₹20,000</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>परिवार सहायता</td>
+                        <td>₹15,000</td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+
+                    <tr>
+
+                        <th colspan="2">
+                            कुल खर्च
+                        </th>
+
+                        <th>
+                            ₹1,20,000
+                        </th>
+
+                    </tr>
+
+                </tfoot>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     PHOTO GALLERY
+===================================================== -->
+
+<section class="incident-gallery">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <h2>
+                कार्यक्रम की तस्वीरें
+            </h2>
+
+            <p>
+                सहायता अभियान की झलकियाँ
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="gallery-card">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=2070"
+                    alt="Gallery">
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="gallery-card">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=2070"
+                    alt="Gallery">
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="gallery-card">
+
+                    <img
+                    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2070"
+                    alt="Gallery">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     LOCATION SECTION
+===================================================== -->
+
+<section class="location-section">
+
+    <div class="container text-center">
+
+        <div class="section-title">
+
+            <h2>
+                घटना का स्थान
+            </h2>
+
+            <p>
+                दुर्घटना एवं सहायता अभियान का स्थान
+            </p>
+
+        </div>
+
+        <div class="location-card">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h3>
+                अथमलगोला, पटना, बिहार
+            </h3>
+
+            <p>
+                यहाँ दुर्घटना हुई और यहीं से सहायता अभियान शुरू किया गया।
+            </p>
+
+            <a
+            href="https://maps.google.com/?q=Athmalgola,Bihar"
+            target="_blank"
+            class="location-btn">
+
+                Google Map देखें
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-4">
+
+                <h4>
+                    यादव वेलफेयर सोसाइटी
+                </h4>
+
+                <p>
+
+                    समाज सेवा, शिक्षा सहायता,
+                    चिकित्सा सहायता और गरीब
+                    परिवारों की मदद के लिए समर्पित।
+
+                </p>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <h4>
+                    महत्वपूर्ण लिंक
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            होम
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="achievements.html">
+                            उपलब्धियाँ
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            संपर्क
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <h4>
+                    सोशल मीडिया
+                </h4>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="text-center">
+
+            © 2026 यादव वेलफेयर सोसाइटी |
+            सभी अधिकार सुरक्षित
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- =====================================================
+     BACK TO TOP BUTTON
+===================================================== -->
+
+<a href="#"
+class="top-btn">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</a>
+
+<!-- =====================================================
+     CSS PART 3
+===================================================== -->
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init({
+    duration:1000,
+    once:true
+});
+
+</script>
+
+</body>
+</html>
