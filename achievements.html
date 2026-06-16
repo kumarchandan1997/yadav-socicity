@@ -61,49 +61,139 @@
         max-width: 100%;
       }
 
-      /* ==========================================================
-           NAVBAR
-        ========================================================== */
+      /* ================= NAVBAR ================= */
 
       .navbar {
         background: #0f172a;
-        padding: 15px 0;
+        padding: 12px 0;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
       }
 
       .navbar-brand {
-        font-size: 32px;
-        font-weight: 700;
-        color: #fff !important;
+        text-decoration: none;
+        margin-right: 40px;
       }
 
-      .navbar-brand span {
+      .logo-text h3 {
+        margin: 0;
+
         color: #f59e0b;
+
+        font-size: 32px;
+
+        font-weight: 700;
+
+        line-height: 1.2;
+      }
+
+      .logo-text small {
+        display: block;
+
+        color: #ffffff;
+
+        font-size: 12px;
+
+        letter-spacing: 0.5px;
+
+        margin-top: 3px;
+
+        opacity: 0.9;
+      }
+
+      .navbar-nav {
+        align-items: center;
       }
 
       .nav-link {
         color: #fff !important;
+
+        margin: 0 10px;
+
         font-size: 17px;
-        margin-left: 15px;
+
         font-weight: 500;
+
         transition: 0.3s;
+
+        position: relative;
       }
 
-      .nav-link:hover {
-        color: #f59e0b !important;
-      }
+      .nav-link::after {
+        content: "";
 
-      .register-btn {
+        position: absolute;
+
+        left: 0;
+
+        bottom: -6px;
+
+        width: 0;
+
+        height: 2px;
+
         background: #f59e0b;
-        color: #fff !important;
-        padding: 10px 22px;
-        border-radius: 50px;
-        margin-left: 20px;
-        font-weight: 600;
+
+        transition: 0.4s;
       }
 
-      .register-btn:hover {
-        background: #ffb703;
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .login-btn {
+        margin-left: 20px;
+
+        padding: 10px 28px;
+
+        border: 2px solid white;
+
+        border-radius: 30px;
+
+        color: #fff;
+
+        transition: 0.4s;
+      }
+
+      .login-btn:hover {
+        background: #f59e0b;
+
+        border-color: #f59e0b;
+
+        color: #fff;
+      }
+
+      /* Mobile */
+
+      @media (max-width: 991px) {
+        .logo-text h3 {
+          font-size: 24px;
+        }
+
+        .logo-text small {
+          display: none;
+        }
+
+        .navbar-collapse {
+          margin-top: 20px;
+
+          background: #0f172a;
+
+          padding: 20px;
+
+          border-radius: 12px;
+        }
+
+        .nav-link {
+          margin: 8px 0;
+        }
+
+        .login-btn {
+          display: block;
+
+          margin: 15px 0 0;
+
+          text-align: center;
+        }
       }
 
       /* ==========================================================
@@ -514,12 +604,15 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          यादव <span>सोसाइटी</span>
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <div class="logo-text">
+            <h3>माधव शक्ति संगठन</h3>
+          </div>
         </a>
 
         <button
           class="navbar-toggler"
+          type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
         >
@@ -527,33 +620,23 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+
             <li class="nav-item">
-              <a href="index.html" class="nav-link"> होम </a>
+              <a class="nav-link" href="achievements.html"> उपलब्धियाँ </a>
             </li>
 
             <li class="nav-item">
-              <a href="index.html#about" class="nav-link"> परिचय </a>
+              <a class="nav-link" href="society-problems.html">
+                समाज की समस्याएँ
+              </a>
             </li>
 
             <li class="nav-item">
-              <a href="achievements.html" class="nav-link"> उपलब्धियाँ </a>
+              <a class="nav-link" href="#members"> हमारे सदस्य </a>
             </li>
-
             <li class="nav-item">
-              <a href="index.html#services" class="nav-link"> सेवाएँ </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="index.html#members" class="nav-link"> पदाधिकारी </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="index.html#contact" class="nav-link"> संपर्क </a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#" class="register-btn"> सदस्य बनें </a>
+              <a href="login.html" class="btn login-btn"> लॉगिन करें </a>
             </li>
           </ul>
         </div>
@@ -618,10 +701,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="achievement-card" data-aos="fade-up">
               <div class="achievement-image">
-                <img
-                  src="images/short-image.png"
-                  alt="Accident Help"
-                />
+                <img src="images/short-image.png" alt="Accident Help" />
 
                 <span class="achievement-badge"> दुर्घटना सहायता </span>
               </div>

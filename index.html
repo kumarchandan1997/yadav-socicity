@@ -47,38 +47,78 @@
 
       /* ================= NAVBAR ================= */
 
+      /* ================= NAVBAR ================= */
+
       .navbar {
         background: #0f172a;
-        padding: 15px 0;
-        transition: 0.4s;
+        padding: 12px 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
       }
 
       .navbar-brand {
-        color: #fff !important;
-        font-size: 28px;
-        font-weight: 700;
+        text-decoration: none;
+        margin-right: 40px;
       }
 
-      .navbar-brand span {
+      .logo-text h3 {
+        margin: 0;
+
         color: #f59e0b;
+
+        font-size: 32px;
+
+        font-weight: 700;
+
+        line-height: 1.2;
+      }
+
+      .logo-text small {
+        display: block;
+
+        color: #ffffff;
+
+        font-size: 12px;
+
+        letter-spacing: 0.5px;
+
+        margin-top: 3px;
+
+        opacity: 0.9;
+      }
+
+      .navbar-nav {
+        align-items: center;
       }
 
       .nav-link {
         color: #fff !important;
-        margin-left: 15px;
+
+        margin: 0 10px;
+
+        font-size: 17px;
+
         font-weight: 500;
-        position: relative;
+
         transition: 0.3s;
+
+        position: relative;
       }
 
       .nav-link::after {
         content: "";
+
         position: absolute;
+
         left: 0;
-        bottom: -5px;
-        width: 0%;
+
+        bottom: -6px;
+
+        width: 0;
+
         height: 2px;
+
         background: #f59e0b;
+
         transition: 0.4s;
       }
 
@@ -86,34 +126,60 @@
         width: 100%;
       }
 
-      .register-btn {
-        background: #f59e0b;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 30px;
-        transition: 0.3s;
-        font-weight: 600;
-      }
-
-      .register-btn:hover {
-        transform: translateY(-3px);
-        background: #ffb703;
-      }
-
       .login-btn {
-        border: 2px solid #fff;
-        color: #fff;
-        padding: 10px 20px;
+        margin-left: 20px;
+
+        padding: 10px 28px;
+
+        border: 2px solid white;
+
         border-radius: 30px;
-        margin-left: 10px;
-        transition: 0.3s;
-        font-weight: 600;
+
+        color: #fff;
+
+        transition: 0.4s;
       }
 
       .login-btn:hover {
-        background: #fff;
-        color: #0f172a;
+        background: #f59e0b;
+
+        border-color: #f59e0b;
+
+        color: #fff;
+      }
+
+      /* Mobile */
+
+      @media (max-width: 991px) {
+        .logo-text h3 {
+          font-size: 24px;
+        }
+
+        .logo-text small {
+          display: none;
+        }
+
+        .navbar-collapse {
+          margin-top: 20px;
+
+          background: #0f172a;
+
+          padding: 20px;
+
+          border-radius: 12px;
+        }
+
+        .nav-link {
+          margin: 8px 0;
+        }
+
+        .login-btn {
+          display: block;
+
+          margin: 15px 0 0;
+
+          text-align: center;
+        }
       }
 
       /* ================= HERO SECTION ================= */
@@ -411,7 +477,7 @@
       .counter-section {
         background: #0f172a;
         color: #fff;
-        padding: 80px 0;
+        padding: 0px 0;
       }
 
       .counter-box {
@@ -854,11 +920,118 @@
 
       /* ================= FOOTER ================= */
 
-      footer {
+      /*=========================
+        FOOTER
+=========================*/
+
+      .footer {
         background: #020617;
+
         color: #fff;
-        text-align: center;
-        padding: 20px;
+
+        padding: 30px 0;
+
+        border-top: 3px solid #f59e0b;
+      }
+
+      .footer-title {
+        color: #f59e0b;
+
+        font-size: 28px;
+
+        font-weight: 700;
+
+        margin-bottom: 10px;
+      }
+
+      .footer-text {
+        color: #cbd5e1;
+
+        margin-bottom: 5px;
+      }
+
+      .footer-tagline {
+        color: #f59e0b;
+
+        font-weight: 600;
+
+        margin: 0;
+      }
+
+      /*=========================
+Developer
+=========================*/
+
+      .developer-box {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: flex-end;
+
+        gap: 15px;
+      }
+
+      .developer-img {
+        width: 70px;
+
+        height: 70px;
+
+        object-fit: cover;
+
+        border-radius: 50%;
+
+        border: 3px solid #f59e0b;
+
+        transition: 0.4s;
+      }
+
+      .developer-img:hover {
+        transform: scale(1.08);
+      }
+
+      .developer-info small {
+        color: #94a3b8;
+
+        display: block;
+      }
+
+      .developer-info h6 {
+        margin: 5px 0;
+
+        color: #fff;
+
+        font-size: 20px;
+
+        font-weight: 700;
+      }
+
+      .developer-info p {
+        color: #f59e0b;
+
+        margin: 0;
+      }
+
+      /*=========================
+Responsive
+=========================*/
+
+      @media (max-width: 768px) {
+        .footer {
+          text-align: center;
+        }
+
+        .developer-box {
+          justify-content: center;
+
+          margin-top: 20px;
+        }
+
+        .developer-img {
+          width: 60px;
+
+          height: 60px;
+        }
       }
 
       /* even css */
@@ -1020,6 +1193,14 @@
 
         .member-card img {
           height: 350px;
+        }
+
+        .brand-main {
+          font-size: 22px;
+        }
+
+        .brand-sub {
+          font-size: 16px;
         }
 
         .hero-content h1 {
@@ -1247,6 +1428,34 @@
           font-size: 22px;
         }
       }
+
+      .hero-content h3 {
+        font-family: "Mukta", sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.4;
+      }
+
+      .hero-highlight {
+        color: #f59e0b;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Tablet */
+      @media (max-width: 992px) {
+        .hero-content h3 {
+          font-size: 34px;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .hero-content h3 {
+          font-size: 26px;
+          line-height: 1.5;
+        }
+      }
     </style>
   </head>
 
@@ -1255,7 +1464,11 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#"> Yadav <span>Society</span> </a>
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <div class="logo-text">
+            <h3>माधव शक्ति संगठन</h3>
+          </div>
+        </a>
 
         <button
           class="navbar-toggler"
@@ -1269,21 +1482,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="#upcomingEvent"> आगामी कार्यक्रम </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#upcomingEvent">Upcoming Events</a>
-            </li>
-
-            <!-- उपलब्धियाँ -->
-
-            <li class="nav-item">
-              <a class="nav-link" href="achievements.html">उपलब्धियाँ</a>
+              <a class="nav-link" href="achievements.html"> उपलब्धियाँ </a>
             </li>
 
             <li class="nav-item">
@@ -1292,32 +1495,11 @@
               </a>
             </li>
 
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#members"> हमारे सदस्य </a>
             </li>
-
             <li class="nav-item">
-              <a class="nav-link" href="#gallery">Gallery</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#register">Register</a>
-            </li> -->
-
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#members">Members</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="#" class="btn register-btn ms-lg-3"> Register </a>
-            </li> -->
-
-            <li class="nav-item">
-              <a href="#" class="btn login-btn"> Login </a>
+              <a href="login.html" class="btn login-btn"> लॉगिन करें </a>
             </li>
           </ul>
         </div>
@@ -1333,9 +1515,10 @@
         class="carousel slide carousel-fade"
         data-bs-ride="carousel"
         data-bs-touch="false"
-        data-bs-interval="4000"
+        data-bs-interval="5000"
       >
-        <!-- ========================================================= CAROUSEL INDICATORS ========================================================= -->
+        <!-- ================= INDICATORS ================= -->
+
         <div class="carousel-indicators">
           <button
             type="button"
@@ -1343,77 +1526,109 @@
             data-bs-slide-to="0"
             class="active"
           ></button>
+
           <button
             type="button"
             data-bs-target="#heroCarousel"
             data-bs-slide-to="1"
           ></button>
+
           <button
             type="button"
             data-bs-target="#heroCarousel"
             data-bs-slide-to="2"
           ></button>
         </div>
-        <!-- ========================================================= CAROUSEL ITEMS ========================================================= -->
+
+        <!-- ================= SLIDES ================= -->
+
         <div class="carousel-inner">
-          <!-- ========================================================= SLIDE 1 ========================================================= -->
+          <!-- ==========================================
+      SLIDE 1
+      =========================================== -->
+
           <div class="carousel-item active">
             <div class="hero-slide hero-slide-1">
               <div class="container">
                 <div class="hero-content" data-aos="zoom-in">
-                  <h1>
-                    मिलकर बनाएँ <br />
-                    <span>बेहतर समाज</span>
-                  </h1>
+                  <h1><span>माधव शक्ति संगठन</span><br /></h1>
+
                   <p>
-                    यादव वेलफेयर सोसाइटी शिक्षा, सामाजिक एकता, युवा विकास और
-                    समाज कल्याण के लिए कार्य करती है।
+                    माधव शक्ति संगठन एक सामाजिक संस्था है, जो शिक्षा, स्वास्थ्य,
+                    रोजगार, सामाजिक एकता, गरीब एवं असहाय परिवारों की सहायता,
+                    युवा सशक्तिकरण तथा ग्राम विकास के लिए निरंतर कार्य कर रही
+                    है। हमारा उद्देश्य प्रत्येक व्यक्ति को सम्मान, सहयोग एवं
+                    बेहतर भविष्य प्रदान करना है।
                   </p>
+
                   <div class="hero-btn">
-                    <a href="#" class="btn1"> समाज से जुड़ें </a>
-                    <a href="#" class="btn2"> और जानें </a>
+                    <a href="#register" class="btn1"> संगठन से जुड़ें </a>
+
+                    <a href="#about" class="btn2"> हमारे बारे में </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- ========================================================= SLIDE 2 ========================================================= -->
+
+          <!-- ==========================================
+      SLIDE 2
+      =========================================== -->
+
           <div class="carousel-item">
             <div class="hero-slide hero-slide-2">
               <div class="container">
                 <div class="hero-content" data-aos="zoom-in">
-                  <h1>
-                    शिक्षा और विकास <br />
-                    <span>हमारा लक्ष्य</span>
-                  </h1>
+                  <h3>
+                    <span class="hero-highlight">
+                      शिक्षा • रोजगार • आत्मनिर्भरता
+                    </span>
+                  </h3>
+
                   <p>
-                    हमारा उद्देश्य समाज के हर युवा को शिक्षित, जागरूक और
-                    आत्मनिर्भर बनाना है।
+                    हमारा संकल्प है कि समाज का प्रत्येक बच्चा शिक्षित बने,
+                    प्रत्येक युवा रोजगार एवं कौशल विकास से जुड़े, तथा हर परिवार
+                    आत्मनिर्भर बनकर सम्मानपूर्वक जीवन जी सके। शिक्षा ही एक
+                    विकसित समाज की सबसे मजबूत नींव है।
                   </p>
+
                   <div class="hero-btn">
-                    <a href="#" class="btn1"> शिक्षा अभियान </a>
-                    <a href="#" class="btn2"> सहयोग करें </a>
+                    <a href="#services" class="btn1"> शिक्षा अभियान </a>
+
+                    <a href="#contact" class="btn2"> सहयोग करें </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- ========================================================= SLIDE 3 ========================================================= -->
+
+          <!-- ==========================================
+      SLIDE 3
+      =========================================== -->
+
           <div class="carousel-item">
             <div class="hero-slide hero-slide-3">
               <div class="container">
                 <div class="hero-content" data-aos="zoom-in">
-                  <h1>
-                    नशा मुक्त और <br />
-                    <span>अपराध मुक्त समाज</span>
-                  </h1>
+                  <h3>
+                    <span class="hero-highlight">
+                      नशा मुक्त • अपराध मुक्त • दहेज मुक्त समाज
+                    </span>
+                  </h3>
+
                   <p>
-                    समाज को शराब, नशाखोरी और अपराध से मुक्त बनाना हमारी
-                    प्राथमिकता है।
+                    माधव शक्ति संगठन समाज से नशाखोरी, दहेज प्रथा, अशिक्षा,
+                    बेरोजगारी, अपराध एवं अन्य सामाजिक कुरीतियों को समाप्त कर एक
+                    सुरक्षित, स्वच्छ, शिक्षित एवं समृद्ध गांव एवं समाज के
+                    निर्माण के लिए प्रतिबद्ध है।
                   </p>
+
                   <div class="hero-btn">
-                    <a href="#" class="btn1"> अभियान से जुड़ें </a>
-                    <a href="#" class="btn2"> संपर्क करें </a>
+                    <a href="society-problems.html" class="btn1">
+                      अभियान देखें
+                    </a>
+
+                    <a href="#contact" class="btn2"> संपर्क करें </a>
                   </div>
                 </div>
               </div>
@@ -1429,13 +1644,19 @@
       <div class="container">
         <!-- SECTION TITLE -->
         <div class="section-about-title" data-aos="fade-up">
-          <span class="about-tag"> यादव वेलफेयर सोसाइटी </span>
+          <span class="about-tag">माधव शक्ति संगठन</span>
+
           <h2>
-            समाज के विकास के लिए <br />
-            एक मजबूत पहल
+            शिक्षित, संगठित एवं <br />
+            विकसित समाज की ओर एक मजबूत कदम
           </h2>
-          <p>शिक्षित, नशा मुक्त, अपराध मुक्त और विकसित समाज की ओर</p>
+
+          <p>
+            समाज सेवा, शिक्षा, जागरूकता और ग्राम विकास के लिए समर्पित एक सामाजिक
+            संगठन
+          </p>
         </div>
+
         <!-- MAIN ROW -->
         <div class="row align-items-stretch g-5">
           <!-- IMAGE SIDE -->
@@ -1443,58 +1664,76 @@
             <div class="about-image-wrapper">
               <img
                 src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070"
-                alt="Yadav Welfare Society"
+                alt="माधव शक्ति संगठन"
               />
+
               <div class="about-image-overlay">
                 <div>
-                  <h3>10+ वर्ष</h3>
-                  <p>समाज सेवा का अनुभव</p>
+                  <h3>समाज सेवा</h3>
+
+                  <p>जनहित एवं ग्राम विकास के लिए समर्पित</p>
                 </div>
               </div>
             </div>
           </div>
+
           <!-- CONTENT SIDE -->
           <div class="col-lg-6" data-aos="fade-left">
             <div class="about-content-box">
-              <h3>समाज की एकता और प्रगति हमारी पहचान</h3>
+              <h3>एकता, सेवा और विकास ही हमारी पहचान</h3>
+
               <p>
-                यादव वेलफेयर सोसाइटी एक सामाजिक संगठन है जिसका मुख्य उद्देश्य
-                समाज को शिक्षित, जागरूक, नशा मुक्त, अपराध मुक्त और आत्मनिर्भर
-                बनाना है। हमारा विश्वास है कि एक मजबूत समाज की नींव शिक्षा,
-                संस्कार, अनुशासन और सामाजिक एकता पर आधारित होती है।
+                <strong>माधव शक्ति संगठन</strong> एक सामाजिक एवं गैर-राजनीतिक
+                संगठन है, जिसका उद्देश्य समाज में शिक्षा, जागरूकता, सामाजिक
+                एकता, ग्राम विकास तथा मानवीय मूल्यों को बढ़ावा देना है। हमारा
+                विश्वास है कि एक संगठित, शिक्षित और जागरूक समाज ही एक मजबूत एवं
+                विकसित राष्ट्र की नींव रख सकता है।
               </p>
+
               <p>
-                संस्था युवाओं को बेहतर शिक्षा, प्रतियोगी परीक्षाओं की तैयारी,
-                करियर मार्गदर्शन और कौशल विकास के लिए प्रेरित करती है ताकि हर
-                युवा अपने जीवन में सफलता प्राप्त कर सके और समाज के विकास में
-                योगदान दे सके।
+                हमारा संगठन विद्यार्थियों को शिक्षा के प्रति प्रेरित करता है,
+                प्रतियोगी परीक्षाओं की तैयारी, करियर मार्गदर्शन, कौशल विकास तथा
+                युवाओं को आत्मनिर्भर बनाने के लिए निरंतर प्रयास करता है। साथ ही
+                गरीब एवं जरूरतमंद परिवारों की सहायता, दुर्घटना पीड़ितों के
+                सहयोग, स्वास्थ्य जागरूकता और सामाजिक कार्यों में सक्रिय भूमिका
+                निभाता है।
               </p>
+
               <p>
-                हम समाज में शराब और अन्य नशे के खिलाफ जागरूकता अभियान चलाते हैं।
-                हमारा लक्ष्य एक ऐसा समाज बनाना है जहाँ युवा अपनी ऊर्जा शिक्षा,
-                रोजगार, खेल और सकारात्मक कार्यों में लगाएँ।
+                हम नशा मुक्ति, दहेज प्रथा उन्मूलन, मृत्यु भोज जैसी सामाजिक
+                कुरीतियों के विरोध में जागरूकता अभियान चलाते हैं। इसके साथ ही
+                स्वच्छता, पर्यावरण संरक्षण, जल संरक्षण, सरकारी विद्यालयों के
+                सुधार, रोजगार के अवसर, महिला सशक्तिकरण एवं अपराध मुक्त समाज के
+                निर्माण के लिए निरंतर कार्यरत हैं।
               </p>
+
               <!-- HIGHLIGHT POINTS -->
               <div class="about-points">
                 <div class="about-point">
                   <i class="fa-solid fa-check"></i>
-                  <span> शिक्षित और जागरूक समाज </span>
+                  <span>शिक्षा एवं युवा सशक्तिकरण</span>
                 </div>
+
                 <div class="about-point">
                   <i class="fa-solid fa-check"></i>
-                  <span> नशा मुक्त एवं अपराध मुक्त समाज </span>
+                  <span>नशा मुक्त, दहेज मुक्त एवं अपराध मुक्त समाज</span>
                 </div>
+
                 <div class="about-point">
                   <i class="fa-solid fa-check"></i>
-                  <span> युवा और महिला सशक्तिकरण </span>
+                  <span>गरीब एवं जरूरतमंद परिवारों की सहायता</span>
                 </div>
+
                 <div class="about-point">
                   <i class="fa-solid fa-check"></i>
-                  <span> समाज के विकास और एकता पर विशेष ध्यान </span>
+                  <span>ग्राम विकास, सामाजिक एकता एवं जनकल्याण</span>
                 </div>
               </div>
+
               <!-- BUTTON -->
-              <div class="about-btn"><a href="#"> और अधिक जानें </a></div>
+              <div class="about-btn">
+                <a href="#contact">हमसे जुड़ें</a>
+              </div>
             </div>
           </div>
         </div>
@@ -1506,31 +1745,39 @@
     <section class="counter-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-6">
-            <div class="counter-box" data-aos="zoom-in">
-              <h2>5000+</h2>
-              <p>Members</p>
-            </div>
-          </div>
+          <!-- सदस्य -->
 
           <div class="col-md-3 col-6">
             <div class="counter-box" data-aos="zoom-in">
-              <h2>1200+</h2>
-              <p>Students Helped</p>
+              <h2>600+</h2>
+              <p>कुल सदस्य</p>
             </div>
           </div>
 
+          <!-- समाज सेवा -->
+
           <div class="col-md-3 col-6">
-            <div class="counter-box" data-aos="zoom-in">
-              <h2>350+</h2>
-              <p>Events</p>
+            <div class="counter-box" data-aos="zoom-in" data-aos-delay="100">
+              <h2>50+</h2>
+              <p>सहायता प्राप्त परिवार</p>
             </div>
           </div>
 
+          <!-- कार्यक्रम -->
+
           <div class="col-md-3 col-6">
-            <div class="counter-box" data-aos="zoom-in">
-              <h2>800+</h2>
-              <p>Volunteers</p>
+            <div class="counter-box" data-aos="zoom-in" data-aos-delay="200">
+              <h2>5</h2>
+              <p>सामाजिक कार्यक्रम</p>
+            </div>
+          </div>
+
+          <!-- स्वयंसेवक -->
+
+          <div class="col-md-3 col-6">
+            <div class="counter-box" data-aos="zoom-in" data-aos-delay="300">
+              <h2>96</h2>
+              <p>सक्रिय स्वयंसेवक</p>
             </div>
           </div>
         </div>
@@ -1867,63 +2114,29 @@
           <!-- IMAGE 1 -->
           <div class="col-lg-4 col-md-6">
             <div class="gallery-card" data-aos="zoom-in">
-              <img
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2070"
-                alt="Gallery Image"
-              />
+              <img src="images/gallery.jpeg" alt="Gallery Image" />
               <div class="gallery-overlay"><h4>समाज सेवा कार्यक्रम</h4></div>
             </div>
           </div>
           <!-- IMAGE 2 -->
           <div class="col-lg-4 col-md-6">
             <div class="gallery-card" data-aos="zoom-in" data-aos-delay="100">
-              <img
-                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070"
-                alt="Gallery Image"
-              />
+              <img src="images/gallery1.jpeg" alt="Gallery Image" />
               <div class="gallery-overlay"><h4>शिक्षा जागरूकता अभियान</h4></div>
             </div>
           </div>
           <!-- IMAGE 3 -->
           <div class="col-lg-4 col-md-6">
             <div class="gallery-card" data-aos="zoom-in" data-aos-delay="200">
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071"
-                alt="Gallery Image"
-              />
+              <img src="images/gallery3.png" alt="Gallery Image" />
               <div class="gallery-overlay"><h4>युवा विकास कार्यक्रम</h4></div>
             </div>
           </div>
           <!-- IMAGE 4 -->
           <div class="col-lg-4 col-md-6">
             <div class="gallery-card" data-aos="zoom-in">
-              <img
-                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070"
-                alt="Gallery Image"
-              />
+              <img src="images/gallery4.png" alt="Gallery Image" />
               <div class="gallery-overlay"><h4>महिला सशक्तिकरण</h4></div>
-            </div>
-          </div>
-          <!-- IMAGE 5 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-card" data-aos="zoom-in" data-aos-delay="100">
-              <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070"
-                alt="Gallery Image"
-              />
-              <div class="gallery-overlay"><h4>समाज विकास बैठक</h4></div>
-            </div>
-          </div>
-          <!-- IMAGE 6 -->
-          <div class="col-lg-4 col-md-6">
-            <div class="gallery-card" data-aos="zoom-in" data-aos-delay="200">
-              <img
-                src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=2070"
-                alt="Gallery Image"
-              />
-              <div class="gallery-overlay">
-                <h4>स्वास्थ्य जागरूकता अभियान</h4>
-              </div>
             </div>
           </div>
         </div>
@@ -2059,18 +2272,18 @@
           <div class="col-lg-4 col-md-6">
             <div class="member-card" data-aos="zoom-in">
               <img
-                src="https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=1974"
+                src="images/developer.jpeg"
                 alt="Member"
               />
               <div class="member-overlay">
                 <div class="member-info">
-                  <h4>Sachin Yadav</h4>
-                  <p>Youth Leader</p>
+                  <h4>chandan Kumar</h4>
+                  <p>Education Advisor</p>
                   <div class="member-contact">
-                    <a href="tel:+915555555555">
+                    <a href="tel:+919155508599">
                       <i class="fa-solid fa-phone"></i> Call
                     </a>
-                    <a href="https://wa.me/915555555555" target="_blank">
+                    <a href="https://wa.me/9155508599" target="_blank">
                       <i class="fa-brands fa-whatsapp"></i> WhatsApp
                     </a>
                   </div>
@@ -2157,8 +2370,40 @@
 
     <!-- ================= FOOTER ================= -->
 
-    <footer>
-      <p>© 2026 Yadav Welfare Society | All Rights Reserved</p>
+    <footer class="footer">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Organization -->
+
+          <div class="col-lg-7 text-center text-lg-start">
+            <h4 class="footer-title">माधव शक्ति संगठन</h4>
+
+            <p class="footer-text">
+              © 2026 <strong>माधव शक्ति संगठन</strong> | सर्वाधिकार सुरक्षित
+            </p>
+          </div>
+
+          <!-- Developer -->
+
+          <div class="col-lg-5 text-center text-lg-end mt-4 mt-lg-0">
+            <div class="developer-box">
+              <!-- अपनी फोटो का Path यहाँ दें -->
+
+              <img
+                src="images/developer.jpeg"
+                alt="चन्दन कुमार"
+                class="developer-img"
+              />
+
+              <div class="developer-info">
+                <small>वेबसाइट का विकास एवं डिज़ाइन</small>
+
+                <h6>चन्दन कुमार</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
