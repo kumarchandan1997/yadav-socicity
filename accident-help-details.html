@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>दुर्घटना सहायता अभियान | यादव वेलफेयर सोसाइटी</title>
+    <title>दुर्घटना सहायता अभियान | माधव शक्ति संगठन</title>
 
     <!-- Bootstrap -->
 
@@ -507,56 +507,303 @@
         color: #fff;
       }
 
+      /*=========================================
+            FOOTER
+=========================================*/
+
       .footer {
-        background: #0f172a;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+
         color: #fff;
-        padding: 80px 0 30px;
+
+        padding: 70px 0 25px;
+
+        margin-top: 80px;
       }
+
+      .footer-logo h2 {
+        font-size: 34px;
+
+        font-weight: 700;
+
+        color: #f59e0b;
+
+        margin-bottom: 20px;
+
+        font-family: "Noto Sans Devanagari", sans-serif;
+      }
+
+      .footer-text {
+        line-height: 2;
+
+        font-size: 16px;
+
+        color: #d1d5db;
+
+        text-align: justify;
+      }
+
+      /* Links */
 
       .footer h4 {
-        margin-bottom: 20px;
-        color: #f59e0b;
+        font-size: 22px;
+
+        margin-bottom: 25px;
+
+        font-weight: 700;
+
+        color: #fff;
+
+        position: relative;
       }
 
-      .footer p {
-        color: #cbd5e1;
-        line-height: 1.9;
+      .footer h4::after {
+        content: "";
+
+        width: 60px;
+
+        height: 3px;
+
+        background: #f59e0b;
+
+        position: absolute;
+
+        left: 0;
+
+        bottom: -10px;
+
+        border-radius: 30px;
       }
 
-      .footer ul {
+      .footer-links {
         list-style: none;
+
         padding: 0;
+
+        margin: 0;
       }
 
-      .footer ul li {
-        margin-bottom: 10px;
+      .footer-links li {
+        margin-bottom: 15px;
       }
 
-      .footer ul li a {
-        color: #cbd5e1;
+      .footer-links a {
+        color: #d1d5db;
+
+        text-decoration: none;
+
+        transition: 0.3s;
+
+        font-size: 16px;
       }
 
-      .footer ul li a:hover {
+      .footer-links a:hover {
         color: #f59e0b;
+
+        padding-left: 8px;
+      }
+
+      /* Contact */
+
+      .contact-info p {
+        margin-bottom: 15px;
+
+        font-size: 16px;
+
+        color: #d1d5db;
+      }
+
+      .contact-info i {
+        width: 28px;
+
+        color: #f59e0b;
+      }
+
+      /* Social */
+
+      .social-icons {
+        margin-top: 25px;
+
+        display: flex;
+
+        gap: 15px;
       }
 
       .social-icons a {
-        width: 45px;
-        height: 45px;
-        background: #1e293b;
-        color: #fff;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        width: 48px;
+
+        height: 48px;
+
+        background: #ffffff15;
+
         border-radius: 50%;
-        margin-right: 10px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 20px;
+
+        color: #fff;
+
         transition: 0.4s;
+
+        text-decoration: none;
       }
 
       .social-icons a:hover {
         background: #f59e0b;
+
+        transform: translateY(-6px);
       }
 
+      /* Developer */
+
+      .developer-card {
+        background: #ffffff10;
+
+        padding: 25px;
+
+        border-radius: 20px;
+
+        text-align: center;
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        backdrop-filter: blur(8px);
+
+        transition: 0.4s;
+      }
+
+      .developer-card:hover {
+        transform: translateY(-8px);
+
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      .developer-card img {
+        width: 120px;
+
+        height: 120px;
+
+        border-radius: 50%;
+
+        object-fit: cover;
+
+        border: 5px solid #f59e0b;
+
+        margin-bottom: 20px;
+      }
+
+      .developer-card h5 {
+        font-size: 22px;
+
+        margin-bottom: 5px;
+
+        font-weight: 700;
+      }
+
+      .developer-card span {
+        display: inline-block;
+
+        background: #f59e0b;
+
+        padding: 6px 18px;
+
+        border-radius: 30px;
+
+        font-size: 14px;
+
+        margin-bottom: 15px;
+
+        color: #fff;
+      }
+
+      .developer-card p {
+        font-size: 15px;
+
+        color: #ddd;
+
+        line-height: 1.8;
+      }
+
+      /* Bottom */
+
+      .footer hr {
+        margin: 50px 0 20px;
+
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+
+      .footer-bottom {
+        text-align: center;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+
+        font-size: 16px;
+
+        color: #d1d5db;
+      }
+
+      .footer-bottom strong {
+        color: #f59e0b;
+      }
+
+      /* Responsive */
+
+      @media (max-width: 992px) {
+        .footer {
+          text-align: center;
+        }
+
+        .footer h4::after {
+          left: 50%;
+
+          transform: translateX(-50%);
+        }
+
+        .social-icons {
+          justify-content: center;
+        }
+
+        .contact-info i {
+          width: auto;
+
+          margin-right: 8px;
+        }
+
+        .footer-logo h2 {
+          font-size: 30px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .footer {
+          padding: 50px 0 20px;
+        }
+
+        .footer-logo h2 {
+          font-size: 26px;
+        }
+
+        .footer h4 {
+          font-size: 20px;
+        }
+
+        .developer-card img {
+          width: 100px;
+
+          height: 100px;
+        }
+
+        .footer-text {
+          font-size: 15px;
+        }
+      }
       .top-btn {
         position: fixed;
         right: 20px;
@@ -695,10 +942,10 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#members"> हमारे सदस्य </a>
+              <a class="nav-link" href="members.html"> हमारे सदस्य </a>
             </li>
             <li class="nav-item">
-              <a href="login.html" class="btn login-btn"> लॉगिन करें </a>
+              <a href="" class="btn login-btn"> लॉगिन करें </a>
             </li>
           </ul>
         </div>
@@ -1238,61 +1485,98 @@
 
     <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <h4>यादव वेलफेयर सोसाइटी</h4>
+        <div class="row gy-5">
+          <!-- About -->
 
-            <p>
-              समाज सेवा, शिक्षा सहायता, चिकित्सा सहायता और गरीब परिवारों की मदद
-              के लिए समर्पित।
+          <div class="col-lg-4">
+            <div class="footer-logo">
+              <h2>माधव शक्ति संगठन</h2>
+            </div>
+
+            <p class="footer-text">
+              शिक्षित, संगठित एवं विकसित समाज के निर्माण के लिए समर्पित सामाजिक
+              संगठन। हमारा उद्देश्य शिक्षा, रोजगार, सामाजिक सुधार, नशा मुक्ति
+              एवं गांव के सर्वांगीण विकास हेतु कार्य करना है।
             </p>
           </div>
 
-          <div class="col-lg-4">
+          <!-- Quick Links -->
+
+          <div class="col-lg-2">
             <h4>महत्वपूर्ण लिंक</h4>
 
-            <ul>
-              <li>
-                <a href="index.html"> होम </a>
-              </li>
+            <ul class="footer-links">
+              <li><a href="index.html">🏠 होम</a></li>
 
-              <li>
-                <a href="achievements.html"> उपलब्धियाँ </a>
-              </li>
+              <li><a href="achievements.html">🏆 उपलब्धियाँ</a></li>
 
-              <li>
-                <a href="#"> संपर्क </a>
-              </li>
+              <li><a href="society-problems.html">🌍 समाज की समस्याएँ</a></li>
+
+              <li><a href="members.html">👨‍👩‍👧 सदस्य</a></li>
+
+              <li><a href="#contact">📞 संपर्क</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-4">
-            <h4>सोशल मीडिया</h4>
+          <!-- Contact -->
+
+          <div class="col-lg-3">
+            <h4>संपर्क करें</h4>
+
+            <div class="contact-info">
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+
+                उस्मानपुर, बिहार
+              </p>
+
+              <p>
+                <i class="fa-solid fa-phone"></i>
+
+                +91 9876543210
+              </p>
+
+              <p>
+                <i class="fa-solid fa-envelope"></i>
+
+                info@madhavshakti.org
+              </p>
+            </div>
 
             <div class="social-icons">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
-              </a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
 
-              <a href="#">
-                <i class="fab fa-instagram"></i>
-              </a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
 
-              <a href="#">
-                <i class="fab fa-youtube"></i>
-              </a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
 
-              <a href="#">
-                <i class="fab fa-whatsapp"></i>
-              </a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <!-- Developer -->
+
+          <div class="col-lg-3">
+            <div class="developer-card">
+              <img src="images/developer.jpeg" alt="Developer" />
+
+              <h5>चंदन कुमार</h5>
+
+              <p>
+                इस वेबसाइट का डिज़ाइन एवं विकास
+
+                <strong> चंदन कुमार </strong>
+
+                द्वारा किया गया है।
+              </p>
             </div>
           </div>
         </div>
 
         <hr />
 
-        <div class="text-center">
-          © 2026 यादव वेलफेयर सोसाइटी | सभी अधिकार सुरक्षित
+        <div class="footer-bottom">
+          <p>© 2026 <strong>माधव शक्ति संगठन</strong> | सभी अधिकार सुरक्षित।</p>
         </div>
       </div>
     </footer>
