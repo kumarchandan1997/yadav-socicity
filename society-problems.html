@@ -1122,6 +1122,53 @@
       .progress-bar {
         border-radius: 20px;
       }
+
+      /*=============================
+      School Gallery
+=============================*/
+
+      .gallery-card {
+        width: 100%;
+        height: 260px;
+        overflow: hidden;
+        border-radius: 18px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        transition: 0.4s;
+        background: #fff;
+      }
+
+      .gallery-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+        display: block;
+      }
+
+      .gallery-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      .gallery-card:hover img {
+        transform: scale(1.08);
+      }
+
+      /* Tablet */
+
+      @media (max-width: 992px) {
+        .gallery-card {
+          height: 220px;
+        }
+      }
+
+      /* Mobile */
+
+      @media (max-width: 576px) {
+        .gallery-card {
+          height: 200px;
+        }
+      }
     </style>
   </head>
 
@@ -5530,7 +5577,7 @@ JOIN CAMPAIGN
 
             <div class="position-relative">
               <img
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d?q=80&w=2070"
+                src="images/school6.jpeg"
                 class="img-fluid w-100"
                 style="height: 450px; object-fit: cover"
               />
@@ -5625,7 +5672,7 @@ JOIN CAMPAIGN
                 <div class="row align-items-center">
                   <div class="col-lg-6">
                     <img
-                      src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?q=80&w=2070"
+                      src="images/school3.jpeg"
                       class="img-fluid rounded shadow"
                     />
                   </div>
@@ -6241,50 +6288,109 @@ JOIN CAMPAIGN
               <div class="container">
                 <div class="text-center mb-5">
                   <h2 class="fw-bold">📸 अभियान की झलकियाँ</h2>
+                  <p class="text-muted">
+                    उत्क्रमित मध्य विद्यालय, उस्मानपुर की वर्तमान स्थिति
+                  </p>
                 </div>
 
                 <div class="row g-4">
-                  <div class="col-lg-4 col-md-6">
-                    <img
-                      src="images/school.jpeg"
-                      class="img-fluid rounded shadow"
-                    />
+                  <!-- Image 1 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school.jpeg" alt="विद्यालय फोटो 1" />
+                    </div>
                   </div>
 
-                  <div class="col-lg-4 col-md-6">
-                    <img
-                      src="images/school2.jpeg"
-                      class="img-fluid rounded shadow"
-                    />
+                  <!-- Image 2 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school2.jpeg" alt="विद्यालय फोटो 2" />
+                    </div>
                   </div>
 
-                  <div class="col-lg-4 col-md-6">
-                    <img
-                      src="images/school3.jpeg"
-                      class="img-fluid rounded shadow"
-                    />
+                  <!-- Image 3 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school3.jpeg" alt="विद्यालय फोटो 3" />
+                    </div>
                   </div>
 
-                  <div class="col-lg-4 col-md-6">
-                    <img
-                      src="images/school4.jpeg"
-                      class="img-fluid rounded shadow"
-                    />
+                  <!-- Image 4 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school4.jpeg" alt="विद्यालय फोटो 4" />
+                    </div>
                   </div>
 
-                  <!-- <div class="col-lg-4 col-md-6">
-                    <img
-                      src="images/school5.jpg"
-                      class="img-fluid rounded shadow"
-                    />
+                  <!-- Image 5 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school5.jpeg" alt="विद्यालय फोटो 5" />
+                    </div>
                   </div>
 
-                  <div class="col-lg-4 col-md-6">
-                    <img
-                      src="images/school6.jpg"
-                      class="img-fluid rounded shadow"
-                    />
-                  </div> -->
+                  <!-- Image 6 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school6.jpeg" alt="विद्यालय फोटो 6" />
+                    </div>
+                  </div>
+
+                  <!-- Image 7 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school7.jpeg" alt="विद्यालय फोटो 7" />
+                    </div>
+                  </div>
+
+                  <!-- Image 8 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school8.jpeg" alt="विद्यालय फोटो 8" />
+                    </div>
+                  </div>
+
+                  <!-- Image 9 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school9.jpeg" alt="विद्यालय फोटो 9" />
+                    </div>
+                  </div>
+
+                  <!-- Image 10 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school10.jpeg" alt="विद्यालय फोटो 10" />
+                    </div>
+                  </div>
+
+                  <!-- Image 11 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school11.jpeg" alt="विद्यालय फोटो 11" />
+                    </div>
+                  </div>
+
+                  <!-- Image 12 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school12.jpeg" alt="विद्यालय फोटो 12" />
+                    </div>
+                  </div>
+
+                  <!-- Image 13 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school13.jpeg" alt="विद्यालय फोटो 13" />
+                    </div>
+                  </div>
+
+                  <!-- Image 14 -->
+                  <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="gallery-card">
+                      <img src="images/school14.jpeg" alt="विद्यालय फोटो 14" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
